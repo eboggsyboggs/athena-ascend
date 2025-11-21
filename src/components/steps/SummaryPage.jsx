@@ -98,7 +98,7 @@ const SummaryPage = ({ formData, onNavigate }) => {
     // Title
     doc.setFontSize(18)
     doc.setTextColor(147, 51, 234)
-    doc.text('MY HEALTH SUMMIT & PERSONAL PLAN', margin, yPos)
+    doc.text('MY ATHENA ASCEND PLAN', margin, yPos)
     yPos += 10
     doc.setFontSize(10)
     doc.setTextColor(100, 100, 100)
@@ -107,7 +107,7 @@ const SummaryPage = ({ formData, onNavigate }) => {
 
     // Vision Setting
     addSection('STEP 1: VISION SETTING')
-    addText('Health Summit (1-2 years):', 11, true)
+    addText('Vision (1-2 years):', 11, true)
     addText(formData.visionStatement || 'Not yet defined')
     addText('How I Feel:', 11, true)
     addText(formData.feelingState || 'Not yet defined')
@@ -229,7 +229,7 @@ const SummaryPage = ({ formData, onNavigate }) => {
     addText(actionPlan.weeklyCheckIn.nextSteps, 9)
 
     // Save PDF
-    doc.save(`health-summit-plan-${new Date().toISOString().split('T')[0]}.pdf`)
+    doc.save(`athena-ascend-plan-${new Date().toISOString().split('T')[0]}.pdf`)
   }
 
   const handleReminder = (period) => {
@@ -294,7 +294,7 @@ const SummaryPage = ({ formData, onNavigate }) => {
     ).join('\\n')
 
     const visionSummary = `
-HEALTH SUMMIT CHECK-IN
+ATHENA ASCEND CHECK-IN
 ======================
 
 YOUR VISION (1-2 years):
@@ -320,7 +320,7 @@ Review your full plan at: ${window.location.origin}
 
     const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Health Summit//Reminder//EN
+PRODID:-//Athena Ascend//Reminder//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
@@ -330,7 +330,7 @@ DTSTART:${startDate}
 DTEND:${endDate}
 SUMMARY:Habit Check-In
 DESCRIPTION:${visionSummary.replace(/\n/g, '\\n')}
-LOCATION:Health Summit App
+LOCATION:Athena Ascend App
 STATUS:CONFIRMED
 SEQUENCE:0
 BEGIN:VALARM
@@ -345,7 +345,7 @@ END:VCALENDAR`.trim()
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = `health-summit-reminder-${period}.ics`
+    a.download = `athena-ascend-reminder-${period}.ics`
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)
