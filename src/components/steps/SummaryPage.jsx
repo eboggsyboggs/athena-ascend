@@ -89,7 +89,7 @@ const SummaryPage = ({ formData, onNavigate }) => {
     const addSection = (title) => {
       yPos += 5
       doc.setFontSize(14)
-      doc.setTextColor(34, 197, 94) // Green color
+      doc.setTextColor(147, 51, 234) // Purple color
       doc.text(title, margin, yPos)
       yPos += 8
       doc.setTextColor(0, 0, 0)
@@ -97,7 +97,7 @@ const SummaryPage = ({ formData, onNavigate }) => {
 
     // Title
     doc.setFontSize(18)
-    doc.setTextColor(34, 197, 94)
+    doc.setTextColor(147, 51, 234)
     doc.text('MY HEALTH SUMMIT & PERSONAL PLAN', margin, yPos)
     yPos += 10
     doc.setFontSize(10)
@@ -419,8 +419,8 @@ END:VCALENDAR`.trim()
     <div className="max-w-5xl mx-auto">
       {/* Header */}
       <div className="flex items-center gap-3 mb-8">
-        <div className="p-3 bg-green-100 rounded-xl">
-          <FileText className="w-8 h-8 text-green-600" />
+        <div className="p-3 bg-purple-100 rounded-xl">
+          <FileText className="w-8 h-8 text-purple-600" />
         </div>
         <h2 className="text-4xl font-bold text-stone-900">My Personal Health Plan</h2>
       </div>
@@ -431,7 +431,7 @@ END:VCALENDAR`.trim()
           onClick={() => setActiveTab('plan')}
           className={`px-6 py-3 font-semibold transition-all border-b-2 ${
             activeTab === 'plan'
-              ? 'border-green-600 text-green-600'
+              ? 'border-purple-600 text-purple-600'
               : 'border-transparent text-stone-500 hover:text-stone-700'
           }`}
         >
@@ -444,7 +444,7 @@ END:VCALENDAR`.trim()
           onClick={() => setActiveTab('summary')}
           className={`px-6 py-3 font-semibold transition-all border-b-2 ${
             activeTab === 'summary'
-              ? 'border-green-600 text-green-600'
+              ? 'border-purple-600 text-purple-600'
               : 'border-transparent text-stone-500 hover:text-stone-700'
           }`}
         >
@@ -465,9 +465,9 @@ END:VCALENDAR`.trim()
       {activeTab === 'plan' && (
         <>
           {/* Motivational Message */}
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-500 p-6 rounded-r-xl mb-8">
+          <div className="bg-gradient-to-r from-purple-50 to-blue-50 border-l-4 border-purple-500 p-6 rounded-r-xl mb-8">
             <div className="flex items-start gap-3">
-              <Lightbulb className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+              <Lightbulb className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold text-stone-900 mb-2">Your Starting Point</h3>
                 <p className="text-stone-700 leading-relaxed">{motivationalMessage}</p>
@@ -517,8 +517,8 @@ END:VCALENDAR`.trim()
           <div className="bg-white rounded-2xl shadow-xl border border-stone-200 p-6 mb-6">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-green-100 rounded-xl">
-                  <Target className="w-6 h-6 text-green-600" />
+                <div className="p-3 bg-purple-100 rounded-xl">
+                  <Target className="w-6 h-6 text-purple-600" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-stone-900">Build Your Plan</h3>
@@ -527,7 +527,7 @@ END:VCALENDAR`.trim()
               {isPlanFinalized && (
                 <button
                   onClick={handleEditPlan}
-                  className="flex items-center gap-2 px-4 py-2 text-green-600 hover:text-green-700 font-semibold transition-colors no-print"
+                  className="flex items-center gap-2 px-4 py-2 text-purple-600 hover:text-purple-700 font-semibold transition-colors no-print"
                 >
                   <Edit2 className="w-4 h-4" />
                   Edit
@@ -600,15 +600,15 @@ END:VCALENDAR`.trim()
             {isPlanFinalized ? (
               <>
                 <div className="space-y-3 mb-6">
-                  <div className="bg-green-50 p-4 rounded-lg border-2 border-green-200 mb-4">
-                    <p className="text-sm text-green-800 font-medium">
+                  <div className="bg-purple-50 p-4 rounded-lg border-2 border-purple-200 mb-4">
+                    <p className="text-sm text-purple-800 font-medium">
                       ✓ Your plan is set! Here's what you're committing to this week:
                     </p>
                   </div>
                   {getSelectedActionsData().map((item, index) => (
                     <div key={index} className="p-4 rounded-lg border-2 border-stone-200 bg-white">
                       <div className="flex items-start gap-3">
-                        <div className="flex-shrink-0 w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                        <div className="flex-shrink-0 w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                           ✓
                         </div>
                         <div className="flex-1">
@@ -638,7 +638,7 @@ END:VCALENDAR`.trim()
                   <div className="relative" ref={dropdownRef}>
                     <button
                       onClick={() => setShowReminderDropdown(!showReminderDropdown)}
-                      className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-5 py-3 rounded-lg shadow-md hover:shadow-lg transition-all"
+                      className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-5 py-3 rounded-lg shadow-md hover:shadow-lg transition-all"
                     >
                       <Bell className="w-4 h-4" />
                       Create Calendar Reminder
@@ -656,11 +656,11 @@ END:VCALENDAR`.trim()
                     )}
                   </div>
 
-                  <button onClick={handlePrint} className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-5 py-3 rounded-lg shadow-md hover:shadow-lg transition-all">
+                  <button onClick={handlePrint} className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-5 py-3 rounded-lg shadow-md hover:shadow-lg transition-all">
                     <Printer className="w-4 h-4" />
                     Print
                   </button>
-                  <button onClick={handleDownload} className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-5 py-3 rounded-lg shadow-md hover:shadow-lg transition-all">
+                  <button onClick={handleDownload} className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-5 py-3 rounded-lg shadow-md hover:shadow-lg transition-all">
                     <Download className="w-4 h-4" />
                     Download PDF
                   </button>
@@ -676,7 +676,7 @@ END:VCALENDAR`.trim()
                         key={index} 
                         className={`p-4 rounded-lg border-2 transition-all cursor-pointer ${
                           selectedActions.includes(index)
-                            ? 'bg-green-50 border-green-300'
+                            ? 'bg-purple-50 border-purple-300'
                             : 'bg-white border-stone-200 hover:border-stone-300'
                         }`}
                         onClick={() => toggleActionSelection(index)}
@@ -686,7 +686,7 @@ END:VCALENDAR`.trim()
                             type="checkbox"
                             checked={selectedActions.includes(index)}
                             onChange={() => toggleActionSelection(index)}
-                            className="mt-1 w-5 h-5 text-green-600 rounded border-stone-300 focus:ring-green-500 cursor-pointer"
+                            className="mt-1 w-5 h-5 text-purple-600 rounded border-stone-300 focus:ring-purple-500 cursor-pointer"
                             onClick={(e) => e.stopPropagation()}
                           />
                           <div className="flex-1">
@@ -735,7 +735,7 @@ END:VCALENDAR`.trim()
                 {!showAddCustom ? (
                   <button
                     onClick={() => setShowAddCustom(true)}
-                    className="text-green-600 hover:text-green-700 font-medium text-sm flex items-center gap-2 transition-colors mb-6"
+                    className="text-purple-600 hover:text-purple-700 font-medium text-sm flex items-center gap-2 transition-colors mb-6"
                   >
                     <span className="text-lg">+</span>
                     Hey smarty, I have another idea
@@ -746,13 +746,13 @@ END:VCALENDAR`.trim()
                       value={newCustomAction}
                       onChange={(e) => setNewCustomAction(e.target.value)}
                       placeholder="Describe your custom action..."
-                      className="w-full p-3 border border-stone-300 rounded-lg resize-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full p-3 border border-stone-300 rounded-lg resize-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       rows="3"
                     />
                     <div className="flex gap-2 mt-3">
                       <button
                         onClick={handleAddCustomAction}
-                        className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors"
+                        className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
                       >
                         Add Action
                       </button>
@@ -777,7 +777,7 @@ END:VCALENDAR`.trim()
                       disabled={selectedActions.length === 0 && customActions.length === 0}
                       className={`w-full py-3 font-bold rounded-lg shadow-md transition-all ${
                         selectedActions.length > 0 || customActions.length > 0
-                          ? 'bg-green-600 hover:bg-green-700 text-white hover:shadow-lg'
+                          ? 'bg-purple-600 hover:bg-purple-700 text-white hover:shadow-lg'
                           : 'bg-stone-300 text-stone-500 cursor-not-allowed'
                       }`}
                     >
@@ -798,12 +798,12 @@ END:VCALENDAR`.trim()
               {actionPlan.weeklyActions.length > 0 && (
                 <div className="space-y-6">
                   {actionPlan.weeklyActions.map((item, index) => (
-                    <div key={index} className="border-l-4 border-green-500 pl-4">
+                    <div key={index} className="border-l-4 border-purple-500 pl-4">
                       <h4 className="font-semibold text-stone-900 mb-3">{item.area}</h4>
                       <ul className="space-y-2">
                         {item.actions.map((action, idx) => (
                           <li key={idx} className="flex items-start gap-2 text-stone-700">
-                            <span className="text-green-600 mt-1">✓</span>
+                            <span className="text-purple-600 mt-1">✓</span>
                             <span>{action}</span>
                           </li>
                         ))}
@@ -882,11 +882,11 @@ END:VCALENDAR`.trim()
         {/* Step 1: Vision Setting */}
         <section className="p-6 border-b border-stone-200">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-xl font-bold text-green-800 flex items-center gap-2">
+            <h3 className="text-xl font-bold text-purple-800 flex items-center gap-2">
               <Sparkles className="w-5 h-5" />
               Step 1: Vision Setting
             </h3>
-            <button onClick={() => onNavigate('vision')} className="no-print flex items-center gap-1 text-sm text-stone-600 hover:text-green-600 transition-colors" title="Edit this section">
+            <button onClick={() => onNavigate('vision')} className="no-print flex items-center gap-1 text-sm text-stone-600 hover:text-purple-600 transition-colors" title="Edit this section">
               <Edit2 className="w-4 h-4" />
               Edit
             </button>
@@ -921,8 +921,8 @@ END:VCALENDAR`.trim()
               </div>
             )}
 
-            <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-              <h4 className="text-sm font-semibold text-green-900 mb-2">💚 Why This Matters</h4>
+            <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
+              <h4 className="text-sm font-semibold text-purple-900 mb-2">💚 Why This Matters</h4>
               <p className="text-stone-800 text-sm leading-relaxed mb-3">
                 {isEmpty(formData.whyMatters) ? <span className="text-stone-400 italic">Not yet defined</span> : formData.whyMatters}
               </p>
@@ -931,7 +931,7 @@ END:VCALENDAR`.trim()
                   <p className="text-xs font-semibold text-stone-600 mb-2">My Biggest Drivers:</p>
                   <div className="flex flex-wrap gap-2">
                     {formData.motivationDrivers.map((driver) => (
-                      <span key={driver} className="px-3 py-1 bg-green-200 text-green-900 text-xs font-medium rounded-full">{driver}</span>
+                      <span key={driver} className="px-3 py-1 bg-purple-200 text-purple-900 text-xs font-medium rounded-full">{driver}</span>
                     ))}
                   </div>
                 </div>
@@ -943,11 +943,11 @@ END:VCALENDAR`.trim()
         {/* Step 2: Base Camp */}
         <section className="p-6 border-b border-stone-200">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-xl font-bold text-green-800 flex items-center gap-2">
+            <h3 className="text-xl font-bold text-purple-800 flex items-center gap-2">
               <Heart className="w-5 h-5" />
               Step 2: Base Camp (Resources)
             </h3>
-            <button onClick={() => onNavigate('basecamp')} className="no-print flex items-center gap-1 text-sm text-stone-600 hover:text-green-600 transition-colors" title="Edit this section">
+            <button onClick={() => onNavigate('basecamp')} className="no-print flex items-center gap-1 text-sm text-stone-600 hover:text-purple-600 transition-colors" title="Edit this section">
               <Edit2 className="w-4 h-4" />
               Edit
             </button>
@@ -987,20 +987,20 @@ END:VCALENDAR`.trim()
         {/* Step 3: Assess the Route */}
         <section className="p-6 border-b border-stone-200">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-xl font-bold text-green-800 flex items-center gap-2">
+            <h3 className="text-xl font-bold text-purple-800 flex items-center gap-2">
               <Map className="w-5 h-5" />
               Step 3: Assess the Route
             </h3>
-            <button onClick={() => onNavigate('current')} className="no-print flex items-center gap-1 text-sm text-stone-600 hover:text-green-600 transition-colors" title="Edit this section">
+            <button onClick={() => onNavigate('current')} className="no-print flex items-center gap-1 text-sm text-stone-600 hover:text-purple-600 transition-colors" title="Edit this section">
               <Edit2 className="w-4 h-4" />
               Edit
             </button>
           </div>
           
           <div className="space-y-3">
-            <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-              <h4 className="text-sm font-semibold text-green-900 mb-1">Current Position on the Mountain</h4>
-              <p className="text-3xl font-bold text-green-600">{formData.currentScore || 5} <span className="text-lg text-stone-600">/ 10</span></p>
+            <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
+              <h4 className="text-sm font-semibold text-purple-900 mb-1">Current Position on the Mountain</h4>
+              <p className="text-3xl font-bold text-purple-600">{formData.currentScore || 5} <span className="text-lg text-stone-600">/ 10</span></p>
             </div>
 
             <div>
@@ -1008,7 +1008,7 @@ END:VCALENDAR`.trim()
               {!isArrayEmpty(formData.barriers) ? (
                 <div className="flex flex-wrap gap-2 mb-2">
                   {formData.barriers.map((barrier) => (
-                    <span key={barrier} className="px-3 py-1 bg-green-100 text-green-900 text-xs font-medium rounded-full">{barrier}</span>
+                    <span key={barrier} className="px-3 py-1 bg-purple-100 text-purple-900 text-xs font-medium rounded-full">{barrier}</span>
                   ))}
                 </div>
               ) : (
@@ -1037,11 +1037,11 @@ END:VCALENDAR`.trim()
         {/* Step 4: Capacity & Support */}
         <section className="p-6">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-xl font-bold text-green-800 flex items-center gap-2">
+            <h3 className="text-xl font-bold text-purple-800 flex items-center gap-2">
               <Clock3 className="w-5 h-5" />
               Step 4: Capacity & Support
             </h3>
-            <button onClick={() => onNavigate('capacity')} className="no-print flex items-center gap-1 text-sm text-stone-600 hover:text-green-600 transition-colors" title="Edit this section">
+            <button onClick={() => onNavigate('capacity')} className="no-print flex items-center gap-1 text-sm text-stone-600 hover:text-purple-600 transition-colors" title="Edit this section">
               <Edit2 className="w-4 h-4" />
               Edit
             </button>
@@ -1069,9 +1069,9 @@ END:VCALENDAR`.trim()
               </div>
             )}
 
-            <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-              <h4 className="text-sm font-semibold text-green-900 mb-1">Readiness Level</h4>
-              <p className="text-3xl font-bold text-green-600">{formData.readiness || 5} <span className="text-lg text-stone-600">/ 10</span></p>
+            <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
+              <h4 className="text-sm font-semibold text-purple-900 mb-1">Readiness Level</h4>
+              <p className="text-3xl font-bold text-purple-600">{formData.readiness || 5} <span className="text-lg text-stone-600">/ 10</span></p>
             </div>
 
             <div>
@@ -1079,7 +1079,7 @@ END:VCALENDAR`.trim()
               {!isArrayEmpty(formData.supportNeeds) ? (
                 <div className="flex flex-wrap gap-2">
                   {formData.supportNeeds.map((need) => (
-                    <span key={need} className="px-3 py-1 bg-green-100 text-green-900 text-xs font-medium rounded-full">{need}</span>
+                    <span key={need} className="px-3 py-1 bg-purple-100 text-purple-900 text-xs font-medium rounded-full">{need}</span>
                   ))}
                 </div>
               ) : (
@@ -1091,7 +1091,7 @@ END:VCALENDAR`.trim()
       </div>
 
           {/* Footer Note */}
-          <div className="mt-8 bg-green-50 border-l-4 border-green-500 p-6 rounded-r-xl">
+          <div className="mt-8 bg-purple-50 border-l-4 border-purple-500 p-6 rounded-r-xl">
             <h4 className="font-semibold text-stone-900 mb-2">📅 Next Steps</h4>
             <ul className="text-sm text-stone-700 space-y-1">
               <li>• Save or print this plan for easy reference</li>

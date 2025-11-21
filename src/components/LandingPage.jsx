@@ -37,22 +37,23 @@ const LandingPage = ({ onStart }) => {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-stone-50 via-green-50 to-stone-100">
+    <div className="min-h-screen bg-gradient-to-br from-stone-50 via-purple-50 to-stone-100">
       {/* Hero Section */}
       <div className="container mx-auto px-6 pt-12 pb-16">
         <div className="text-center max-w-4xl mx-auto mb-10">
-          <div className="flex justify-center mb-6">
-            <div className="relative">
+          <div className="flex flex-col items-center mb-6">
+            <div className="relative mb-2">
               <img 
-                src="/summit-logo.png" 
-                alt="Summit Logo" 
-                className="w-24 h-24 object-contain"
+                src="/athenahealth-logo.png" 
+                alt="athenahealth Logo" 
+                className="h-12 object-contain"
               />
             </div>
+            <p className="text-2xl font-semibold text-stone-700">Ascend</p>
           </div>
           
           <h1 className="text-5xl lg:text-6xl font-bold text-stone-900 mb-4 leading-tight">
-            Your Fastest Path to a <span className="text-green-600">Healthier You</span>
+            Your Fastest Path to a <span className="text-purple-600">Healthier You</span>
           </h1>
           
           <p className="text-xl lg:text-2xl text-stone-600 mb-6 leading-relaxed">
@@ -63,7 +64,7 @@ const LandingPage = ({ onStart }) => {
           <div className="text-center mb-10">
             <button
               onClick={onStart}
-              className="group inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white font-bold text-lg px-10 py-5 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              className="group inline-flex items-center gap-3 bg-purple-600 hover:bg-purple-700 text-white font-bold text-lg px-10 py-5 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
             >
               Begin Your Ascent
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
@@ -96,8 +97,8 @@ const LandingPage = ({ onStart }) => {
           <div className="flex flex-col items-center gap-24 relative" style={{ zIndex: 1 }}>
             {/* Summit Vision */}
             <div className="flex flex-col items-center text-center max-w-md relative">
-              <div className="w-16 h-16 bg-green-100 rounded-full mb-6 flex items-center justify-center shadow-lg">
-                <Flag className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-purple-100 rounded-full mb-6 flex items-center justify-center shadow-lg">
+                <Flag className="w-8 h-8 text-purple-600" />
               </div>
               <h3 className="text-3xl font-bold text-stone-900 mb-2">Summit Vision</h3>
               <p className="text-base text-stone-600 mb-4">You in 1-2 years</p>
@@ -108,8 +109,8 @@ const LandingPage = ({ onStart }) => {
 
             {/* Base Camp Inventory */}
             <div className="flex flex-col items-center text-center max-w-md relative">
-              <div className="w-16 h-16 bg-green-100 rounded-full mb-6 flex items-center justify-center shadow-lg">
-                <Backpack className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-purple-100 rounded-full mb-6 flex items-center justify-center shadow-lg">
+                <Backpack className="w-8 h-8 text-purple-600" />
               </div>
               <h3 className="text-3xl font-bold text-stone-900 mb-2">Base Camp Inventory</h3>
               <p className="text-base text-stone-600 mb-4">Your Resources</p>
@@ -120,8 +121,8 @@ const LandingPage = ({ onStart }) => {
 
             {/* Map the Ascent */}
             <div className="flex flex-col items-center text-center max-w-md relative">
-              <div className="w-16 h-16 bg-green-100 rounded-full mb-6 flex items-center justify-center shadow-lg">
-                <TrendingUp className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-purple-100 rounded-full mb-6 flex items-center justify-center shadow-lg">
+                <TrendingUp className="w-8 h-8 text-purple-600" />
               </div>
               <h3 className="text-3xl font-bold text-stone-900 mb-2">Map the Ascent</h3>
               <p className="text-base text-stone-600 mb-4">Know the Path</p>
@@ -132,8 +133,8 @@ const LandingPage = ({ onStart }) => {
 
             {/* First Steps */}
             <div className="flex flex-col items-center text-center max-w-md">
-              <div className="w-16 h-16 bg-green-100 rounded-full mb-6 flex items-center justify-center shadow-lg">
-                <Footprints className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-purple-100 rounded-full mb-6 flex items-center justify-center shadow-lg">
+                <Footprints className="w-8 h-8 text-purple-600" />
               </div>
               <h3 className="text-3xl font-bold text-stone-900 mb-2">First Steps</h3>
               <p className="text-base text-stone-600 mb-4">Habit experimentation</p>

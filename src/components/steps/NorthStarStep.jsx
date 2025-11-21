@@ -58,8 +58,8 @@ const NorthStarStep = ({ formData, updateFormData, onNext }) => {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="flex items-center gap-3 mb-6">
-        <div className="p-3 bg-green-100 rounded-xl">
-          <Flag className="w-8 h-8 text-green-600" />
+        <div className="p-3 bg-purple-100 rounded-xl">
+          <Flag className="w-8 h-8 text-purple-600" />
         </div>
         <div>
           <h2 className="text-4xl font-bold text-stone-900">Step 1: Vision Setting</h2>
@@ -84,7 +84,7 @@ const NorthStarStep = ({ formData, updateFormData, onNext }) => {
             value={formData.visionStatement || ''}
             onChange={(e) => updateFormData('visionStatement', e.target.value)}
             placeholder="In 12 months, I wake up feeling energized and clear-headed. My body moves easily and I have the stamina to..."
-            className="w-full h-40 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition resize-none"
+            className="w-full h-40 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition resize-none"
           />
           
           {/* Suggestion Chips */}
@@ -96,7 +96,7 @@ const NorthStarStep = ({ formData, updateFormData, onNext }) => {
                   key={idx}
                   type="button"
                   onClick={() => insertSuggestion('visionStatement', suggestion.text)}
-                  className="px-3 py-1.5 text-sm bg-green-50 text-green-700 rounded-full border border-green-200 hover:bg-green-100 transition-all"
+                  className="px-3 py-1.5 text-sm bg-purple-50 text-purple-700 rounded-full border border-purple-200 hover:bg-purple-100 transition-all"
                 >
                   {suggestion.label}
                 </button>
@@ -117,7 +117,7 @@ const NorthStarStep = ({ formData, updateFormData, onNext }) => {
             value={formData.feelingState || ''}
             onChange={(e) => updateFormData('feelingState', e.target.value)}
             placeholder="I feel calm and resilient. My energy is steady throughout the day. I'm confident in my body and..."
-            className="w-full h-32 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition resize-none"
+            className="w-full h-32 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition resize-none"
           />
           
           {/* Suggestion Chips */}
@@ -129,7 +129,7 @@ const NorthStarStep = ({ formData, updateFormData, onNext }) => {
                   key={idx}
                   type="button"
                   onClick={() => insertSuggestion('feelingState', suggestion.text)}
-                  className="px-3 py-1.5 text-sm bg-green-50 text-green-700 rounded-full border border-green-200 hover:bg-green-100 transition-all"
+                  className="px-3 py-1.5 text-sm bg-purple-50 text-purple-700 rounded-full border border-purple-200 hover:bg-purple-100 transition-all"
                 >
                   {suggestion.label}
                 </button>
@@ -150,12 +150,12 @@ const NorthStarStep = ({ formData, updateFormData, onNext }) => {
             value={formData.futureAbilities || ''}
             onChange={(e) => updateFormData('futureAbilities', e.target.value)}
             placeholder="I can hike for hours without fatigue. I play with my kids without getting winded. I sleep through the night..."
-            className="w-full h-28 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition resize-none"
+            className="w-full h-28 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition resize-none"
           />
         </div>
 
         {/* Motivation Section */}
-        <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-200">
+        <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border-2 border-purple-200">
           <h3 className="text-2xl font-bold text-stone-900 mb-4">Why This Vision Matters</h3>
           
           {/* Q5: Why Does This Matter */}
@@ -170,7 +170,7 @@ const NorthStarStep = ({ formData, updateFormData, onNext }) => {
               value={formData.whyMatters || ''}
               onChange={(e) => updateFormData('whyMatters', e.target.value)}
               placeholder="This matters because I want to be present for my family, have the energy to pursue my passions, and feel like myself again..."
-              className="w-full h-32 p-4 border border-green-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition resize-none"
+              className="w-full h-32 p-4 border border-purple-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition resize-none"
             />
             
             {/* Suggestion Chips */}
@@ -182,7 +182,7 @@ const NorthStarStep = ({ formData, updateFormData, onNext }) => {
                     key={idx}
                     type="button"
                     onClick={() => insertSuggestion('whyMatters', suggestion.text)}
-                    className="px-3 py-1.5 text-sm bg-green-50 text-green-700 rounded-full border border-green-200 hover:bg-green-100 transition-all"
+                    className="px-3 py-1.5 text-sm bg-purple-50 text-purple-700 rounded-full border border-purple-200 hover:bg-purple-100 transition-all"
                   >
                     {suggestion.label}
                   </button>
@@ -196,7 +196,7 @@ const NorthStarStep = ({ formData, updateFormData, onNext }) => {
       <div className="mt-8 flex justify-end">
         <button
           onClick={onNext}
-          className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all"
+          className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all"
         >
           Continue to Base Camp
           <ArrowRight className="w-5 h-5" />

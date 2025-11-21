@@ -47,8 +47,8 @@ const CardinalDirectionsStep = ({ formData, updateFormData, onNext }) => {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="flex items-center gap-3 mb-6">
-        <div className="p-3 bg-green-100 rounded-xl">
-          <Backpack className="w-8 h-8 text-green-600" />
+        <div className="p-3 bg-purple-100 rounded-xl">
+          <Backpack className="w-8 h-8 text-purple-600" />
         </div>
         <div>
           <h2 className="text-4xl font-bold text-stone-900">Step 2: Pack Your Base Camp</h2>
@@ -76,7 +76,7 @@ const CardinalDirectionsStep = ({ formData, updateFormData, onNext }) => {
             value={formData.nonNegotiables}
             onChange={(e) => updateFormData('nonNegotiables', e.target.value)}
             placeholder="1. 7+ hours of sleep nightly&#10;2. Sustainable, not restrictive&#10;3. Time for family meals..."
-            className="w-full h-40 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition resize-none"
+            className="w-full h-40 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition resize-none"
           />
           
           {/* Suggestion Chips */}
@@ -88,7 +88,7 @@ const CardinalDirectionsStep = ({ formData, updateFormData, onNext }) => {
                   key={idx}
                   type="button"
                   onClick={() => insertSuggestion('nonNegotiables', suggestion.text)}
-                  className="px-3 py-1.5 text-sm bg-green-50 text-green-700 rounded-full border border-green-200 hover:bg-green-100 transition-all"
+                  className="px-3 py-1.5 text-sm bg-purple-50 text-purple-700 rounded-full border border-purple-200 hover:bg-purple-100 transition-all"
                 >
                   {suggestion.label}
                 </button>
@@ -112,7 +112,7 @@ const CardinalDirectionsStep = ({ formData, updateFormData, onNext }) => {
             value={formData.strengths}
             onChange={(e) => updateFormData('strengths', e.target.value)}
             placeholder="1. Consistent morning routine&#10;2. Supportive partner&#10;3. Access to gym/trails&#10;4. Good stress management..."
-            className="w-full h-40 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition resize-none"
+            className="w-full h-40 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition resize-none"
           />
           
           {/* Suggestion Chips */}
@@ -124,7 +124,7 @@ const CardinalDirectionsStep = ({ formData, updateFormData, onNext }) => {
                   key={idx}
                   type="button"
                   onClick={() => insertSuggestion('strengths', suggestion.text)}
-                  className="px-3 py-1.5 text-sm bg-green-50 text-green-700 rounded-full border border-green-200 hover:bg-green-100 transition-all"
+                  className="px-3 py-1.5 text-sm bg-purple-50 text-purple-700 rounded-full border border-purple-200 hover:bg-purple-100 transition-all"
                 >
                   {suggestion.label}
                 </button>
@@ -148,7 +148,7 @@ const CardinalDirectionsStep = ({ formData, updateFormData, onNext }) => {
             value={formData.energizers}
             onChange={(e) => updateFormData('energizers', e.target.value)}
             placeholder="1. Morning walks in nature&#10;2. Cooking healthy meals&#10;3. Yoga or stretching&#10;4. Quality sleep..."
-            className="w-full h-40 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition resize-none"
+            className="w-full h-40 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition resize-none"
           />
           
           {/* Suggestion Chips */}
@@ -160,7 +160,7 @@ const CardinalDirectionsStep = ({ formData, updateFormData, onNext }) => {
                   key={idx}
                   type="button"
                   onClick={() => insertSuggestion('energizers', suggestion.text)}
-                  className="px-3 py-1.5 text-sm bg-green-50 text-green-700 rounded-full border border-green-200 hover:bg-green-100 transition-all"
+                  className="px-3 py-1.5 text-sm bg-purple-50 text-purple-700 rounded-full border border-purple-200 hover:bg-purple-100 transition-all"
                 >
                   {suggestion.label}
                 </button>
@@ -184,7 +184,7 @@ const CardinalDirectionsStep = ({ formData, updateFormData, onNext }) => {
             value={formData.gapsWants}
             onChange={(e) => updateFormData('gapsWants', e.target.value)}
             placeholder="1. Learn proper strength training form&#10;2. Find accountability partner&#10;3. Develop meal prep routine&#10;4. Address sleep issues..."
-            className="w-full h-40 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition resize-none"
+            className="w-full h-40 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition resize-none"
           />
           
           {/* Suggestion Chips */}
@@ -196,7 +196,7 @@ const CardinalDirectionsStep = ({ formData, updateFormData, onNext }) => {
                   key={idx}
                   type="button"
                   onClick={() => insertSuggestion('gapsWants', suggestion.text)}
-                  className="px-3 py-1.5 text-sm bg-green-50 text-green-700 rounded-full border border-green-200 hover:bg-green-100 transition-all"
+                  className="px-3 py-1.5 text-sm bg-purple-50 text-purple-700 rounded-full border border-purple-200 hover:bg-purple-100 transition-all"
                 >
                   {suggestion.label}
                 </button>
@@ -209,7 +209,7 @@ const CardinalDirectionsStep = ({ formData, updateFormData, onNext }) => {
       <div className="mt-8 flex justify-end">
         <button
           onClick={onNext}
-          className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all"
+          className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all"
         >
           Continue to Current State
           <ArrowRight className="w-5 h-5" />

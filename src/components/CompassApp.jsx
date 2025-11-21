@@ -73,7 +73,7 @@ const CompassApp = ({ onBack }) => {
       {/* Sidebar Navigation */}
       <nav className="w-full md:w-64 bg-stone-100 border-b md:border-b-0 md:border-r border-stone-200 p-4 no-print">
         <div className="flex items-center justify-between md:block mb-6">
-          <h1 className="text-2xl font-bold text-green-800 flex items-center gap-2">
+          <h1 className="text-2xl font-bold text-purple-800 flex items-center gap-2">
             <Mountain className="w-7 h-7" />
             Health Summit
           </h1>
@@ -103,7 +103,7 @@ const CompassApp = ({ onBack }) => {
                   onClick={() => setCurrentStep(step.id)}
                   className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap w-full ${
                     currentStep === step.id
-                      ? 'bg-green-100 text-green-800 font-semibold'
+                      ? 'bg-purple-100 text-purple-800 font-semibold'
                       : 'text-stone-600 hover:bg-stone-200 hover:text-stone-900'
                   }`}
                 >
@@ -135,9 +135,9 @@ const IntroPage = ({ onNext }) => {
       </p>
 
       <div className="max-w-2xl mb-10">
-        <div className="bg-green-50 rounded-2xl border border-green-200 shadow-sm p-6">
-          <h3 className="text-2xl font-semibold text-green-900 mb-4">Tips for the Journey</h3>
-          <ul className="space-y-3 text-green-900">
+        <div className="bg-purple-50 rounded-2xl border border-purple-200 shadow-sm p-6">
+          <h3 className="text-2xl font-semibold text-purple-900 mb-4">Tips for the Journey</h3>
+          <ul className="space-y-3 text-purple-900">
             <li>• Progress over perfection—capture what you can right now.</li>
             <li>• Answers autosave in your browser so you can pause anytime.</li>
             <li>• This is a safe space: honesty beats polished language.</li>
@@ -147,7 +147,7 @@ const IntroPage = ({ onNext }) => {
 
       <button
         onClick={onNext}
-        className="bg-green-600 hover:bg-green-700 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all w-full sm:w-auto"
+        className="bg-purple-600 hover:bg-purple-700 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all w-full sm:w-auto"
       >
         Start Step 1: Vision Setting →
       </button>

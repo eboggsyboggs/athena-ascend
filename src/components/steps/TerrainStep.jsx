@@ -55,8 +55,8 @@ const TerrainStep = ({ formData, updateFormData, onNext }) => {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="flex items-center gap-3 mb-6">
-        <div className="p-3 bg-green-100 rounded-xl">
-          <Map className="w-8 h-8 text-green-600" />
+        <div className="p-3 bg-purple-100 rounded-xl">
+          <Map className="w-8 h-8 text-purple-600" />
         </div>
         <div>
           <h2 className="text-4xl font-bold text-stone-900">Step 3: Assess the Route</h2>
@@ -85,12 +85,12 @@ const TerrainStep = ({ formData, updateFormData, onNext }) => {
               max="10"
               value={formData.currentScore || 5}
               onChange={(e) => updateFormData('currentScore', parseInt(e.target.value))}
-              className="flex-1 h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-green-600"
+              className="flex-1 h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-purple-600"
             />
             <span className="text-sm text-stone-500 font-medium">10</span>
           </div>
           <div className="mt-3 text-center">
-            <span className="text-3xl font-bold text-green-600">{formData.currentScore || 5}</span>
+            <span className="text-3xl font-bold text-purple-600">{formData.currentScore || 5}</span>
             <span className="text-stone-600 ml-2">/ 10</span>
           </div>
         </div>
@@ -110,8 +110,8 @@ const TerrainStep = ({ formData, updateFormData, onNext }) => {
                 onClick={() => toggleBarrier(option)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   (formData.barriers || []).includes(option)
-                    ? 'bg-green-600 text-white shadow-md'
-                    : 'bg-white text-stone-700 border border-stone-300 hover:border-green-400'
+                    ? 'bg-purple-600 text-white shadow-md'
+                    : 'bg-white text-stone-700 border border-stone-300 hover:border-purple-400'
                 }`}
               >
                 {option}
@@ -122,7 +122,7 @@ const TerrainStep = ({ formData, updateFormData, onNext }) => {
             value={formData.barriersNotes || ''}
             onChange={(e) => updateFormData('barriersNotes', e.target.value)}
             placeholder="Any additional notes about your barriers..."
-            className="w-full h-32 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition resize-none"
+            className="w-full h-32 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition resize-none"
           />
         </div>
 
@@ -141,8 +141,8 @@ const TerrainStep = ({ formData, updateFormData, onNext }) => {
                 onClick={() => toggleHabit(option)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   (formData.habitsToImprove || []).includes(option)
-                    ? 'bg-green-600 text-white shadow-md'
-                    : 'bg-white text-stone-700 border border-stone-300 hover:border-green-400'
+                    ? 'bg-purple-600 text-white shadow-md'
+                    : 'bg-white text-stone-700 border border-stone-300 hover:border-purple-400'
                 }`}
               >
                 {option}
@@ -155,7 +155,7 @@ const TerrainStep = ({ formData, updateFormData, onNext }) => {
       <div className="mt-8 flex justify-end">
         <button
           onClick={onNext}
-          className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all"
+          className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all"
         >
           Continue to Capacity & Support
           <ArrowRight className="w-5 h-5" />

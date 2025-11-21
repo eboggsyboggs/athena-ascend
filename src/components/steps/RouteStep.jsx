@@ -54,8 +54,8 @@ const RouteStep = ({ formData, updateFormData, onNext }) => {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="flex items-center gap-3 mb-6">
-        <div className="p-3 bg-green-100 rounded-xl">
-          <Clock3 className="w-8 h-8 text-green-600" />
+        <div className="p-3 bg-purple-100 rounded-xl">
+          <Clock3 className="w-8 h-8 text-purple-600" />
         </div>
         <div>
           <h2 className="text-4xl font-bold text-stone-900">Step 4: Capacity & Support</h2>
@@ -88,7 +88,7 @@ const RouteStep = ({ formData, updateFormData, onNext }) => {
                   value={option}
                   checked={formData.timeCapacity === option}
                   onChange={(e) => updateFormData('timeCapacity', e.target.value)}
-                  className="w-4 h-4 text-green-600 focus:ring-2 focus:ring-green-500"
+                  className="w-4 h-4 text-purple-600 focus:ring-2 focus:ring-purple-500"
                 />
                 <span className="text-stone-800 font-medium">{option}</span>
               </label>
@@ -105,7 +105,7 @@ const RouteStep = ({ formData, updateFormData, onNext }) => {
             value={formData.preferredTimes || ''}
             onChange={(e) => updateFormData('preferredTimes', e.target.value)}
             placeholder="Mornings before work, Tuesday/Thursday evenings, weekend mornings..."
-            className="w-full h-24 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition resize-none"
+            className="w-full h-24 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition resize-none"
           />
           
           {/* Suggestion Chips */}
@@ -117,7 +117,7 @@ const RouteStep = ({ formData, updateFormData, onNext }) => {
                   key={idx}
                   type="button"
                   onClick={() => insertSuggestion('preferredTimes', suggestion.text)}
-                  className="px-3 py-1.5 text-sm bg-green-50 text-green-700 rounded-full border border-green-200 hover:bg-green-100 transition-all"
+                  className="px-3 py-1.5 text-sm bg-purple-50 text-purple-700 rounded-full border border-purple-200 hover:bg-purple-100 transition-all"
                 >
                   {suggestion.label}
                 </button>
@@ -138,7 +138,7 @@ const RouteStep = ({ formData, updateFormData, onNext }) => {
             value={formData.sustainableNotes || ''}
             onChange={(e) => updateFormData('sustainableNotes', e.target.value)}
             placeholder="Starting small with 10-minute walks. Meal prepping on Sundays. Going to bed 30 minutes earlier..."
-            className="w-full h-28 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 transition resize-none"
+            className="w-full h-28 p-4 border border-stone-300 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition resize-none"
           />
           
           {/* Suggestion Chips */}
@@ -150,7 +150,7 @@ const RouteStep = ({ formData, updateFormData, onNext }) => {
                   key={idx}
                   type="button"
                   onClick={() => insertSuggestion('sustainableNotes', suggestion.text)}
-                  className="px-3 py-1.5 text-sm bg-green-50 text-green-700 rounded-full border border-green-200 hover:bg-green-100 transition-all"
+                  className="px-3 py-1.5 text-sm bg-purple-50 text-purple-700 rounded-full border border-purple-200 hover:bg-purple-100 transition-all"
                 >
                   {suggestion.label}
                 </button>
@@ -160,7 +160,7 @@ const RouteStep = ({ formData, updateFormData, onNext }) => {
         </div>
 
         {/* Q13: Readiness Slider */}
-        <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-200">
+        <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border-2 border-purple-200">
           <label className="block text-xl font-semibold text-stone-800 mb-2">
             How ready are you to begin?
           </label>
@@ -175,12 +175,12 @@ const RouteStep = ({ formData, updateFormData, onNext }) => {
               max="10"
               value={formData.readiness || 5}
               onChange={(e) => updateFormData('readiness', parseInt(e.target.value))}
-              className="flex-1 h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-green-600"
+              className="flex-1 h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-purple-600"
             />
             <span className="text-sm text-stone-500 font-medium">10</span>
           </div>
           <div className="mt-3 text-center">
-            <span className="text-3xl font-bold text-green-600">{formData.readiness || 5}</span>
+            <span className="text-3xl font-bold text-purple-600">{formData.readiness || 5}</span>
             <span className="text-stone-600 ml-2">/ 10</span>
           </div>
         </div>
@@ -200,8 +200,8 @@ const RouteStep = ({ formData, updateFormData, onNext }) => {
                 onClick={() => toggleSupport(option)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   (formData.supportNeeds || []).includes(option)
-                    ? 'bg-green-600 text-white shadow-md'
-                    : 'bg-white text-stone-700 border border-stone-300 hover:border-green-400'
+                    ? 'bg-purple-600 text-white shadow-md'
+                    : 'bg-white text-stone-700 border border-stone-300 hover:border-purple-400'
                 }`}
               >
                 {option}
@@ -214,7 +214,7 @@ const RouteStep = ({ formData, updateFormData, onNext }) => {
       <div className="mt-8 flex justify-end">
         <button
           onClick={onNext}
-          className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all"
+          className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all"
         >
           View My Personal Plan
           <ArrowRight className="w-5 h-5" />
