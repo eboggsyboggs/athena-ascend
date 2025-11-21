@@ -44,12 +44,11 @@ const LandingPage = ({ onStart }) => {
           <div className="flex flex-col items-center mb-6">
             <div className="relative mb-2">
               <img 
-                src="/athenahealth-logo.png" 
-                alt="athenahealth Logo" 
-                className="h-12 object-contain"
+                src="/concept_logo.png" 
+                alt="Ascend Logo" 
+                className="h-16 object-contain"
               />
             </div>
-            <p className="text-2xl font-semibold text-stone-700">Ascend</p>
           </div>
           
           <h1 className="text-5xl lg:text-6xl font-bold text-stone-900 mb-4 leading-tight">

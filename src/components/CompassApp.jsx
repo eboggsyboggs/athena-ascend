@@ -73,9 +73,8 @@ const CompassApp = ({ onBack }) => {
       {/* Sidebar Navigation */}
       <nav className="w-full md:w-64 bg-stone-100 border-b md:border-b-0 md:border-r border-stone-200 p-4 no-print">
         <div className="flex items-center justify-between md:block mb-6">
-          <h1 className="text-2xl font-bold text-purple-800 flex items-center gap-2">
-            <Mountain className="w-7 h-7" />
-            Health Summit
+          <h1 className="text-2xl font-bold text-purple-800">
+            Ascend
           </h1>
           <button
             onClick={onBack}
